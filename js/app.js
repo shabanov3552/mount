@@ -9045,7 +9045,9 @@
                 if (!e.target.classList.contains("_active")) element.innerHTML = "Показать реквизиты"; else element.innerHTML = "Скрыть";
             }));
         }));
-        window["FLS"] = true;
+        const fullScreenBlock = document.querySelector(".fullscreen-block");
+        if (fullScreenBlock) document.querySelector(".header").classList.add("full-animation");
+        window["FLS"] = false;
         isWebp();
         addLoadedClass();
         menuInit();

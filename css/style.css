@@ -1052,6 +1052,13 @@ body::after {
   }
 }
 
+.header.full-animation .header__container {
+  opacity: 0;
+  -webkit-transform: translate(0px, -160px);
+      -ms-transform: translate(0px, -160px);
+          transform: translate(0px, -160px);
+}
+
 .header._header-scroll {
   position: fixed;
   background-color: #2e4a6b;
@@ -1062,13 +1069,6 @@ body::after {
 
 .header._header-show {
   top: 0;
-}
-
-.header__container {
-  opacity: 0;
-  -webkit-transform: translate(0px, -160px);
-      -ms-transform: translate(0px, -160px);
-          transform: translate(0px, -160px);
 }
 
 .header__row {
@@ -3042,6 +3042,9 @@ body::after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .about__video:hover {
@@ -3531,7 +3534,7 @@ body::after {
     transition: transform 1.5s ease-out 0s, opacity 0.5s ease 1.7s, visibility 0.5s ease 1.7s, -webkit-transform 1.5s ease-out 0s;
   }
 
-  .loaded body .header__container {
+  .loaded body .header.full-animation .header__container {
     -webkit-transform: translate(0px, 0px);
         -ms-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
@@ -3682,21 +3685,17 @@ body::after {
     height: 587px;
   }
 
-  .advantages__card:nth-child(1) {
-    background-position: 0 0;
-  }
+  .no-webp .advantages__card:nth-child(1){
+    background: url(../img/advantages_bg.png) 0 0 no-repeat; }
 
-  .advantages__card:nth-child(2) {
-    background-position: 33% -40px;
-  }
+  .no-webp .advantages__card:nth-child(2){
+    background: url(../img/advantages_bg.png) 33% -40px no-repeat; }
 
-  .advantages__card:nth-child(3) {
-    background-position: 66% 0px;
-  }
+  .no-webp .advantages__card:nth-child(3){
+    background: url(../img/advantages_bg.png) 66% 0px no-repeat; }
 
-  .advantages__card:nth-child(4) {
-    background-position: 100% -40px;
-  }
+  .no-webp .advantages__card:nth-child(4){
+    background: url(../img/advantages_bg.png) 100% -40px no-repeat; }
 
   .advantages__card:nth-child(even) {
     -ms-flex-item-align: end;
@@ -4523,7 +4522,7 @@ body::after {
     }
 }
 
-  .header__container {
+  .header.full-animation .header__container {
     -webkit-transform: translate(0px, 0px);
         -ms-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
@@ -5187,6 +5186,26 @@ body::after {
 @media (min-width: 78.125em){
 
   .webp .advantages__card{ background: url(../img/advantages_bg.webp) no-repeat; }
+}
+
+@media (min-width: 78.125em){
+
+  .webp .advantages__card:nth-child(1){ background: url(../img/advantages_bg.webp) 0 0 no-repeat; }
+}
+
+@media (min-width: 78.125em){
+
+  .webp .advantages__card:nth-child(2){ background: url(../img/advantages_bg.webp) 33% -40px no-repeat; }
+}
+
+@media (min-width: 78.125em){
+
+  .webp .advantages__card:nth-child(3){ background: url(../img/advantages_bg.webp) 66% 0px no-repeat; }
+}
+
+@media (min-width: 78.125em){
+
+  .webp .advantages__card:nth-child(4){ background: url(../img/advantages_bg.webp) 100% -40px no-repeat; }
 }
 
 @media (min-width: 120.0625em){
